@@ -1,0 +1,48 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0400
+header_name {.h}
+code_name {.cxx}
+class UserInterface {open
+} {
+  Function {make_window()} {open
+  } {
+    Fl_Window win {
+      label Test open selected
+      xywh {443 118 1000 610} type Double color 26 resizable visible
+    } {
+      Fl_Button butStart {
+        label START
+        xywh {25 75 135 45} box GTK_UP_BOX down_box GTK_DOWN_BOX color 2 selection_color 118
+      }
+      Fl_Button butStop {
+        label STOP
+        xywh {25 140 135 45} box GTK_UP_BOX down_box GTK_DOWN_BOX color 1 selection_color 90
+      }
+      Fl_Menu_Bar {} {
+        xywh {0 0 1000 25} box FLAT_BOX color 7 selection_color 48
+      } {
+        Submenu {} {
+          label File
+          xywh {0 0 100 30}
+        } {
+          MenuItem {} {
+            label OPEN
+            xywh {0 0 50 25}
+          }
+          MenuItem {} {
+            label CLOSE
+            xywh {10 10 50 25}
+          }
+          MenuItem {} {
+            label QUIT
+            xywh {20 20 50 25}
+          }
+        }
+      }
+      Fl_Frame frame {
+        label label
+        xywh {180 30 815 575} box EMBOSSED_BOX color 7 resizable
+      }
+    }
+  }
+}
